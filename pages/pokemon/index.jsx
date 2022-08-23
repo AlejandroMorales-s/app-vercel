@@ -5,7 +5,6 @@ import Link from 'next/link'
 export async function getStaticProps(){
     const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=30')
     const data = await res.json()
-    console.log(data)
     return{
         props:{
             data: data.results
