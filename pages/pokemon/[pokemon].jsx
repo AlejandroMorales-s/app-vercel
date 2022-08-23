@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export async function getStaticPaths(){
@@ -31,6 +32,9 @@ export async function getStaticProps({params}){
 export default function PokemonDetails({data}) {
     return (
         <div>
+            <Link href={'/pokemon'}>
+                <p>Regresar</p>
+            </Link>
             <h1>{data.name}</h1>
         </div>
     )
